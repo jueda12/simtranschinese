@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimTran Chinese Toggle</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel" data-simtran-ignore="true">
+      <h1>簡繁轉換</h1>
+      <p class="subtitle">可轉換輸入文字、選取內容與整頁文字</p>
+
+      <textarea id="textInput" placeholder="在這裡輸入中文文字..." rows="6"></textarea>
+
+      <div class="row two">
+        <button id="toTraditionalText" type="button">輸入轉繁體</button>
+        <button id="toSimplifiedText" type="button">輸入轉簡體</button>
+      </div>
+
+      <div class="row two">
+        <button id="toTraditionalSelection" type="button">選取轉繁體</button>
+        <button id="toSimplifiedSelection" type="button">選取轉簡體</button>
+      </div>
+
+      <div class="row two">
+        <button id="toTraditionalPage" type="button">整頁轉繁體</button>
+        <button id="toSimplifiedPage" type="button">整頁轉簡體</button>
+      </div>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script src="../shared/converter.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

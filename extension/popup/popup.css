@@ -1,0 +1,100 @@
+:root {
+  --bg: #f4efe6;
+  --paper: #fffaf2;
+  --ink: #1a1a1a;
+  --muted: #5f5f5f;
+  --line: #d5c8b4;
+  --accent: #114b5f;
+  --accent-2: #197278;
+  --danger: #8f2d56;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 360px;
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, #f8dba4 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, #d2efe6 0%, transparent 42%),
+    var(--bg);
+}
+
+.panel {
+  padding: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  margin: 6px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 120px;
+  background: var(--paper);
+}
+
+textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 35%, white);
+  border-color: var(--accent);
+}
+
+.row {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.row.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+button:hover {
+  background: var(--accent-2);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.status {
+  min-height: 20px;
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.status.error {
+  color: var(--danger);
+}

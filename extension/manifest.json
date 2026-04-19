@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "SimTran Chinese Toggle",
+  "version": "1.0.0",
+  "description": "Convert Simplified and Traditional Chinese on selected text, page content, and user input.",
+  "permissions": ["contextMenus", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["shared/converter.js", "contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "SimTran Chinese Toggle",
+    "default_popup": "popup/popup.html"
+  }
+}
